@@ -1,0 +1,137 @@
+This is available from our website, www.agi.com in the Resources-FAQ section. It's an attachment to FAQ 11134 How do I convert to STK's 3D model format
+
+It is an xml document.
+Only use the elements that apply to this video.
+The ancillary file must have the same name as the Collada file and reside in the same directory.
+
+---------------------------------------------------------------------------------------------------
+<?xml version = "1.0" standalone = "yes"?>
+<ancillary_model_data version = "1.0">
+ARTICULATIONS:
+Articulations are components (e.g., rocket stages, landing gear, doors, 
+and propellers) that move in various
+ways. The motion is controlled via an articulation script.
+    <articulations>
+        <articulation name = "Sample" type = "transform">
+            <stage init = "1" max = "1" min = "0" name = "Size" type = "uniformScale" />
+            <stage init = "0" max = "360" min = "-360" name = "Roll" type = "xRotate" />
+            <stage init = "0" max = "360" min = "-360" name = "Pitch" type = "yRotate" />
+            <stage init = "0" max = "360" min = "-360" name = "Yaw" type = "zRotate" />
+            <stage init = "0" max = "1000" min = "-1000" name = "MoveX" type = "xTranslate" />
+            <stage init = "0" max = "1000" min = "-1000" name = "MoveY" type = "yTranslate" />
+            <stage init = "0" max = "1000" min = "-1000" name = "MoveZ" type = "zTranslate" />
+            <assigned_nodes>
+                solar_arrayexample_ROOT-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "Plus_Y_Panels" type = "transform">
+            <stage init = "180" max = "180" min = "0" name = "Flip" type = "yRotate" />
+            <assigned_nodes>
+                ParentLayer18_solar_arrayexampl-Refer-2
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SlrPnl_1" type = "transform">
+            <stage init = "0" max = "0" min = "-105" name = "Yaw" type = "zRotate" />
+            <assigned_nodes>
+                ParentLayer2_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SlrPnl_2" type = "transform">
+            <stage init = "0" max = "0" min = "-30" name = "Yaw" type = "zRotate" />
+            <assigned_nodes>
+                ParentLayer3_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SlrPnl_3" type = "transform">
+            <stage init = "0" max = "0" min = "-30" name = "Yaw" type = "zRotate" />
+            <assigned_nodes>
+                ParentLayer4_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SlrPnl_4" type = "transform">
+            <stage init = "0" max = "0" min = "-30" name = "Yaw" type = "zRotate" />
+            <assigned_nodes>
+                ParentLayer5_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SlrPnl_5" type = "transform">
+            <stage init = "0" max = "0" min = "-30" name = "Yaw" type = "zRotate" />
+            <assigned_nodes>
+                ParentLayer6_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SlrPnl_6" type = "transform">
+            <stage init = "0" max = "0" min = "-30" name = "Yaw" type = "zRotate" />
+            <assigned_nodes>
+                ParentLayer7_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+        <articulation name = "SolarArrays" type = "transform">
+            <stage init = "0" max = "360" min = "-360" name = "Pitch" type = "yRotate" />
+            <assigned_nodes>
+                ParentLayer1_solar_arrayexample-Refer
+            </assigned_nodes>
+        </articulation>
+    </articulations>
+	
+	
+POINTABLE ELEMENTS:
+Pointable elements are components (e.g., radio dishes, cameras, and sun 
+tracking panels) that can
+automatically point to and target other objects.
+    <pointing_data>
+        <pointing node = "ParentLayer1_solar_arrayexample-Refer" vector = "1 0 0" />
+    </pointing_data>
+	
+	
+SOLAR PANEL GROUPS:
+Solar Panel Groups are components defined as solar panels and assigned an 
+efficiency value. This is useful when running the STK solar panel tool.
+    <solar_panel_groups>
+        <solar_panel_group efficiency = "30" name = "FA_U">
+            <assigned_nodes>
+                FA_U
+            </assigned_nodes>
+        <solar_panel_group efficiency = "30" name = "FA_D">
+            <assigned_nodes>
+                FA_D
+            </assigned_nodes>
+        <solar_panel_group efficiency = "30" name = "FA_L">
+            <assigned_nodes>
+                FA_L
+            </assigned_nodes>
+        <solar_panel_group efficiency = "30" name = "FA_R">
+            <assigned_nodes>
+                FA_R
+            </assigned_nodes>
+			
+    </solar_panel_groups>
+	
+	
+EFFECT ATTACH POINTS:
+Effect attach points are used for attaching vapor trails to the 3D model.
+    <effect_origins>
+        Smoke
+    </effect_origins>
+	
+	
+SENSOR ATTACH POINTS:
+Sensor attach points are used for attaching STK sensors to the 3D model.
+	<sensor_origins>
+		HGA
+	</sensor_origins>
+	
+	
+NON-OBSCURING MATERIAL:
+Non-obscuring materials are components (e.g., secondary mirrors, and 
+radar domes) that are invisible to sensors. This is useful when running the 
+STK sensor obscuration tool.
+	<no_obscuration_nodes>
+		Camera-PolygonMesh
+	</no_obscuration_nodes>
+</ancillary_model_data>
+----------------------------------------------------------------------------------------------------------
+
+Sorry for not having posted this sooner.
+
+Scott.
